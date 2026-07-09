@@ -8,22 +8,38 @@
 // Design rule carried over from the Brains build: NOTHING is fatal. Every source is
 // wrapped so a WAF block, timeout, or markup change on one office (or on TMView) is
 // recorded as `{ ok:false, reason }` and the run still produces a usable snapshot for
-// every other source. GitHub Actions runs from datacenter IPs, so some registers may
-// challenge automated traffic on the first run — that shows up per-source, not as a crash.
+// every other source. National registers are fetched at most 3 at a time so a 2-core
+// GitHub runner is never overwhelmed (the first version opened all of them at once and
+// hit the job timeout).
 
 import { chromium } from 'playwright';
 import { writeFileSync } from 'fs';
 import { MARKS, TMVIEW_SEARCH_BODY } from './portfolio.mjs';
 
 const USPTO_API_KEY = process.env.USPTO_API_KEY || null;
-const NAV_TIMEOUT = 45000;
-const settle = (p) => Promise.allSettled(p);
+const NAV_TIMEOUT = 30000;
+const POST_NAV_WAIT = 4000;
 const nowISO = () => new Date().toISOString();
+
+// Bounded-concurrency map that mirrors Promise.allSettled's result shape.
+async function mapLimit(items, limit, fn) {
+  const results = new Array(items.length);
+  let i = 0;
+  async function worker() {
+    while (i < items.length) {
+      const idx = i++;
+      try { results[idx] = { status: 'fulfilled', value: await fn(items[idx]) }; }
+      catch (e) { results[idx] = { status: 'rejected', reason: e }; }
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+  return results;
+}
 
 // ---------- LAYER 1: TMView ----------
 async function fetchTMView(page) {
   try {
-    await page.goto('https://www.tmdn.org/tmview/', { waitUntil: 'domcontentloaded', timeout: 90000 });
+    await page.goto('https://www.tmdn.org/tmview/', { waitUntil: 'domcontentloaded', timeout: 60000 });
     await page.waitForTimeout(4000);
     const search = await page.evaluate(async (body) => {
       const r = await fetch('/tmview/api/search/results?translate=true', {
@@ -34,17 +50,15 @@ async function fetchTMView(page) {
     }, TMVIEW_SEARCH_BODY);
 
     const marks = search.tradeMarks || [];
-    const byApp = {};
     const details = {};
     for (const t of marks) {
-      byApp[t.applicationNumber] = t;
       try {
         details[t.ST13] = await page.evaluate(async (id) => {
           const r = await fetch(`/tmview/api/trademark/detail/${id}`);
           return r.ok ? r.json() : { error: 'HTTP ' + r.status };
         }, t.ST13);
       } catch (e) { details[t.ST13] = { error: String(e.message || e) }; }
-      await page.waitForTimeout(700);
+      await page.waitForTimeout(500);
     }
     return { ok: true, count: marks.length, search: marks, details };
   } catch (e) {
@@ -101,7 +115,7 @@ async function scrapeDetail(browser, mark) {
   const page = await browser.newPage();
   try {
     await page.goto(mark.national.url, { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
-    await page.waitForTimeout(6000);
+    await page.waitForTimeout(POST_NAV_WAIT);
     const text = (await page.evaluate(() => document.body.innerText || '')).replace(/\s+\n/g, '\n');
     if (!text || text.length < 40 || /maintenance|manuten|unavailable|access denied|forbidden|captcha|are you a robot/i.test(text)) {
       return { ok: false, reason: 'blocked/empty page (len ' + text.length + ') — likely WAF or maintenance' };
@@ -112,7 +126,7 @@ async function scrapeDetail(browser, mark) {
     return { ok: true, source: 'scrape', statusLine, flags, textHash: text.length, sample: text.slice(0, 900) };
   } catch (e) {
     return { ok: false, reason: String(e.message || e) };
-  } finally { await page.close(); }
+  } finally { await page.close().catch(() => {}); }
 }
 
 // IPONZ — no stable deep link; drive the search form, then read the case.
@@ -121,7 +135,7 @@ async function scrapeIPONZ(browser, mark) {
   try {
     await page.goto('https://app.iponz.govt.nz/app/Extra/IP/TM/Qbe.aspx?sid=0&op=EXTRA_tm_qbe&directAccess=true',
       { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
-    await page.waitForTimeout(4000);
+    await page.waitForTimeout(POST_NAV_WAIT);
     await page.evaluate((n) => {
       const el = document.getElementById('MainContent_ctrlTMSearch_txtAppNr');
       if (el) el.value = n;
@@ -132,7 +146,7 @@ async function scrapeIPONZ(browser, mark) {
           'MainContent_ctrlTMSearchValidationGroup', '', false, true));
       }
     }, mark.national.appNumber);
-    await page.waitForTimeout(6000);
+    await page.waitForTimeout(POST_NAV_WAIT);
     const text = await page.evaluate(() => document.body.innerText || '');
     if (!text.includes(mark.national.appNumber) && !/SSV/i.test(text)) {
       return { ok: false, reason: 'IPONZ result not reached (form/session)' };
@@ -141,7 +155,7 @@ async function scrapeIPONZ(browser, mark) {
     return { ok: true, source: 'IPONZ form', statusLine, sample: text.slice(0, 900) };
   } catch (e) {
     return { ok: false, reason: String(e.message || e) };
-  } finally { await page.close(); }
+  } finally { await page.close().catch(() => {}); }
 }
 
 async function fetchNational(browser, mark) {
@@ -168,14 +182,21 @@ function compareSources(tmv, nat) {
   return { comparable: true, agree, tmviewStatus: tmv.status || null, nationalStatus: nat.status || nat.statusLine || null };
 }
 
-// ---------- run ----------
-const browser = await chromium.launch();
-const tmvPage = await browser.newPage();
-const tmv = await fetchTMView(tmvPage);
-await tmvPage.close();
-
-const nationalResults = await settle(MARKS.map((m) => fetchNational(browser, m)));
-await browser.close();
+// ---------- run (nothing here is allowed to abort the snapshot) ----------
+let tmv = { ok: false, reason: 'not run' };
+let nationalResults = MARKS.map(() => ({ status: 'rejected', reason: new Error('not run') }));
+let browser;
+try {
+  browser = await chromium.launch();
+  const tmvPage = await browser.newPage();
+  tmv = await fetchTMView(tmvPage);
+  await tmvPage.close().catch(() => {});
+  nationalResults = await mapLimit(MARKS, 3, (m) => fetchNational(browser, m));
+} catch (e) {
+  tmv = { ok: false, reason: 'browser launch/run error: ' + String(e.message || e) };
+} finally {
+  if (browser) await browser.close().catch(() => {});
+}
 
 const marks = MARKS.map((m, i) => {
   const tmView = tmviewFieldsFor(m, tmv);
@@ -197,6 +218,6 @@ const snapshot = {
 writeFileSync('snapshot.json', JSON.stringify(snapshot, null, 2));
 const natOk = marks.filter((m) => m.national.ok).length;
 console.log(`snapshot.json written @ ${snapshot.fetched_at}`);
-console.log(`  TMView: ${tmv.ok ? tmv.count + ' marks' : 'UNAVAILABLE'}`);
+console.log(`  TMView: ${tmv.ok ? tmv.count + ' marks' : 'UNAVAILABLE (' + tmv.reason + ')'}`);
 console.log(`  National registers reached: ${natOk}/${MARKS.length}`);
 console.log(`  Discrepancies flagged: ${snapshot.discrepancies.length}`);
