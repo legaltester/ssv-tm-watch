@@ -1,0 +1,895 @@
+{
+  "fetched_at": "2026-07-09T13:39:05.005Z",
+  "sources": {
+    "tmview": "ok (15 marks)"
+  },
+  "national_source_health": {
+    "US-99104870": "unavailable: USPTO_API_KEY secret not set — US source paused",
+    "US-99104968": "unavailable: USPTO_API_KEY secret not set — US source paused",
+    "EM-019056030": "ok",
+    "EM-019070030": "ok",
+    "GB-UK00004152137": "ok",
+    "GB-UK00004152144": "ok",
+    "AU-2541093": "ok",
+    "AU-2541094": "ok",
+    "CA-2398060": "ok",
+    "CA-2398059": "ok",
+    "NZ-1290682": "unavailable: page.evaluate: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them\n    at Sys.WebForms.PageRequestManager._doPostBack (https://app.iponz.govt.nz/app/ScriptResource.axd?d=PkBHudMXcUvfCw627f6nkf3MGRE6zNimtbtUR4b4k7h-_rAGo8TZopsEDs2z-YM7hXLJf5jcduNv-uPfYyBfhWXXWJXh54PbCSOYMU2FIUz5LH6RL4hMgNi3C9jvQrE5VHas80EzWxntQ8ric4hLdvof2Gt11k06QziCQSYDDnqmKno2tigukGxSUCH2w_3O0&t=511fa37d:5:13771)\n    at Sys.WebForms.PageRequestManager._doPostBackWithOptions (https://app.iponz.govt.nz/app/ScriptResource.axd?d=PkBHudMXcUvfCw627f6nkf3MGRE6zNimtbtUR4b4k7h-_rAGo8TZopsEDs2z-YM7hXLJf5jcduNv-uPfYyBfhWXXWJXh54PbCSOYMU2FIUz5LH6RL4hMgNi3C9jvQrE5VHas80EzWxntQ8ric4hLdvof2Gt11k06QziCQSYDDnqmKno2tigukGxSUCH2w_3O0&t=511fa37d:5:16026)\n    at https://app.iponz.govt.nz/app/ScriptResource.axd?d=43ueKijv6myQ79ZAMT-0nnb8LnoO23wa0R4z4DaqPVLhib1_hmPKj8AZEIWQ9kplPkpv-hetZCtv3co1vvajGXPHVQRBGnCCSgpTSQqmlioGecLNH1HcB7MOWCED6p5dWVSH4DVuJ7h_0-iAmT1PJvVAM6kJBy2uMOYMkBCY0RI1&t=511fa37d:5:307\n    at eval (eval at evaluate (:234:30), <anonymous>:6:9)\n    at UtilityScript.evaluate (<anonymous>:236:17)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+    "BR-940265788": "ok",
+    "BR-940266032": "ok",
+    "BR-940267160": "ok",
+    "BR-940267543": "ok"
+  },
+  "discrepancies": [
+    {
+      "id": "EM-019056030",
+      "tmview": "Registered",
+      "national": "published"
+    },
+    {
+      "id": "EM-019070030",
+      "tmview": "Registered",
+      "national": "published"
+    },
+    {
+      "id": "GB-UK00004152137",
+      "tmview": "Registered",
+      "national": null
+    },
+    {
+      "id": "GB-UK00004152144",
+      "tmview": "Registered",
+      "national": null
+    }
+  ],
+  "marks": [
+    {
+      "id": "US-99104870",
+      "mark": "SSV",
+      "office": "USPTO",
+      "app": "99104870",
+      "tmView": {
+        "ok": true,
+        "status": "Filed",
+        "registrationDate": "2025-04-18",
+        "expirationDate": null,
+        "oppositionPeriodEnd": null,
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "Roy D. Gross"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": [
+          {
+            "date": "2026-04-14",
+            "desc": "Notification of non-final action e-mailed"
+          },
+          {
+            "date": "2026-04-14",
+            "desc": "Non-final action e-mailed"
+          },
+          {
+            "date": "2026-04-14",
+            "desc": "Non-final action  written"
+          },
+          {
+            "date": "2026-04-07",
+            "desc": "Teas/email correspondence entered"
+          },
+          {
+            "date": "2026-04-07",
+            "desc": "Teas response to office action received"
+          },
+          {
+            "date": "2026-04-07",
+            "desc": "Correspondence received in law office"
+          },
+          {
+            "date": "2026-01-07",
+            "desc": "Notification of non-final action e-mailed"
+          },
+          {
+            "date": "2026-01-07",
+            "desc": "Non-final action e-mailed"
+          },
+          {
+            "date": "2026-01-07",
+            "desc": "Non-final action  written"
+          },
+          {
+            "date": "2025-12-04",
+            "desc": "Teas/email correspondence entered"
+          },
+          {
+            "date": "2025-12-04",
+            "desc": "Teas response to office action received"
+          },
+          {
+            "date": "2025-12-04",
+            "desc": "Correspondence received in law office"
+          },
+          {
+            "date": "2025-11-12",
+            "desc": "Assigned to examiner"
+          },
+          {
+            "date": "2025-09-04",
+            "desc": "Notification of non-final action e-mailed"
+          },
+          {
+            "date": "2025-09-04",
+            "desc": "Non-final action e-mailed"
+          },
+          {
+            "date": "2025-09-04",
+            "desc": "Non-final action  written"
+          },
+          {
+            "date": "2025-08-25",
+            "desc": "Assigned to examiner"
+          },
+          {
+            "date": "2025-07-10",
+            "desc": "New application office supplied data entered"
+          },
+          {
+            "date": "2025-03-26",
+            "desc": "New application entered"
+          },
+          {
+            "date": "2025-03-26",
+            "desc": "Application filing receipt mailed"
+          }
+        ]
+      },
+      "national": {
+        "ok": false,
+        "reason": "USPTO_API_KEY secret not set — US source paused"
+      },
+      "discrepancy": {
+        "comparable": false
+      }
+    },
+    {
+      "id": "US-99104968",
+      "mark": "SSV.NETWORK",
+      "office": "USPTO",
+      "app": "99104968",
+      "tmView": {
+        "ok": true,
+        "status": "Filed",
+        "registrationDate": "2025-04-18",
+        "expirationDate": null,
+        "oppositionPeriodEnd": null,
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "Roy D. Gross"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": [
+          {
+            "date": "2026-04-14",
+            "desc": "Notification of non-final action e-mailed"
+          },
+          {
+            "date": "2026-04-14",
+            "desc": "Non-final action e-mailed"
+          },
+          {
+            "date": "2026-04-14",
+            "desc": "Non-final action  written"
+          },
+          {
+            "date": "2026-04-01",
+            "desc": "Teas/email correspondence entered"
+          },
+          {
+            "date": "2026-03-30",
+            "desc": "Teas response to office action received"
+          },
+          {
+            "date": "2026-03-30",
+            "desc": "Correspondence received in law office"
+          },
+          {
+            "date": "2025-12-30",
+            "desc": "Notification of non-final action e-mailed"
+          },
+          {
+            "date": "2025-12-30",
+            "desc": "Non-final action e-mailed"
+          },
+          {
+            "date": "2025-12-30",
+            "desc": "Non-final action  written"
+          },
+          {
+            "date": "2025-12-04",
+            "desc": "Teas/email correspondence entered"
+          },
+          {
+            "date": "2025-12-04",
+            "desc": "Teas response to office action received"
+          },
+          {
+            "date": "2025-12-04",
+            "desc": "Correspondence received in law office"
+          },
+          {
+            "date": "2025-11-12",
+            "desc": "Assigned to examiner"
+          },
+          {
+            "date": "2025-09-04",
+            "desc": "Notification of non-final action e-mailed"
+          },
+          {
+            "date": "2025-09-04",
+            "desc": "Non-final action e-mailed"
+          },
+          {
+            "date": "2025-09-04",
+            "desc": "Non-final action  written"
+          },
+          {
+            "date": "2025-08-29",
+            "desc": "Notification of non-final action e-mailed"
+          },
+          {
+            "date": "2025-08-29",
+            "desc": "Non-final action e-mailed"
+          },
+          {
+            "date": "2025-08-29",
+            "desc": "Non-final action  written"
+          },
+          {
+            "date": "2025-08-25",
+            "desc": "Assigned to examiner"
+          },
+          {
+            "date": "2025-08-12",
+            "desc": "Notice of design search code e-mailed"
+          },
+          {
+            "date": "2025-08-12",
+            "desc": "New application office supplied data entered"
+          },
+          {
+            "date": "2025-03-26",
+            "desc": "New application entered"
+          },
+          {
+            "date": "2025-03-26",
+            "desc": "Application filing receipt mailed"
+          }
+        ]
+      },
+      "national": {
+        "ok": false,
+        "reason": "USPTO_API_KEY secret not set — US source paused"
+      },
+      "discrepancy": {
+        "comparable": false
+      }
+    },
+    {
+      "id": "EM-019056030",
+      "mark": "SSV",
+      "office": "EUIPO",
+      "app": "019056030",
+      "tmView": {
+        "ok": true,
+        "status": "Registered",
+        "registrationDate": "2024-11-29",
+        "expirationDate": "2034-07-17",
+        "oppositionPeriodEnd": "2024-11-21",
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "J. PEREIRA DA CRUZ, S.A."
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": "published",
+        "flags": [
+          "opposition",
+          "cancellation"
+        ],
+        "textHash": 6192,
+        "sample": "eSearch plus\nThe EUIPO’s database access\nSearch\nAdvanced search\nEUTM file information\nSSV\n019056030\n eRegister\n Certificate\n Print\nLog in to access advanced functionalities Log in Sign up\nTimeline\n17/07/2024\nEUTM applicationreceived\n22/08/2024\nApplicationpublished\nExamination\n0 oppositions received\n22/11/2024\nEnd ofopposition period\n02/12/2024\nEUTM registeredand published\nOpposition proceedings\n17/07/2034\nEUTM expiry date\n09/07/2026\nRegistered EUTM\nActions and communications\nEUTM\nTrade mark information\nName\nSSV\nFiling number\n019056030\nBasis\nEUTM on which IA is based\nDate of receipt\n17/07/2024\nType\nWord\nNature\nIndividual\nNice classes\n9, 42 ( Nice Classification )\nVienna Classification\nFiling date\n17/07/2024\nRegistration date\n29/11/2024\nExpiry date\n17/07/2034\nDesignation date\nFiling language\nPortuguese\nSecond language\nEnglish\nApplication reference\n2.54APC/HL\nTrade mark status\nRegistered\nAc"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": false,
+        "tmviewStatus": "Registered",
+        "nationalStatus": "published"
+      }
+    },
+    {
+      "id": "EM-019070030",
+      "mark": "ssv.network",
+      "office": "EUIPO",
+      "app": "019070030",
+      "tmView": {
+        "ok": true,
+        "status": "Registered",
+        "registrationDate": "2025-01-11",
+        "expirationDate": "2034-08-21",
+        "oppositionPeriodEnd": "2025-01-03",
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "J. PEREIRA DA CRUZ, S.A."
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": "published",
+        "flags": [
+          "opposition",
+          "cancellation"
+        ],
+        "textHash": 5959,
+        "sample": "eSearch plus\nThe EUIPO’s database access\nSearch\nAdvanced search\nEUTM file information\nssv.network\n019070030\n eRegister\n Certificate\n Print\nLog in to access advanced functionalities Log in Sign up\nTimeline\n21/08/2024\nEUTM applicationreceived\n04/10/2024\nApplicationpublished\nExamination\n0 oppositions received\n07/01/2025\nEnd ofopposition period\n22/01/2025\nEUTM registeredand published\nOpposition proceedings\n21/08/2034\nEUTM expiry date\n09/07/2026\nRegistered EUTM\nActions and communications\nEUTM\nTrade mark information\nName\nssv.network\nFiling number\n019070030\nBasis\nEUTM\nDate of receipt\n21/08/2024\nType\nFigurative\nNature\nIndividual\nNice classes\n9, 42 ( Nice Classification )\nVienna Classification\n26.07.05 ( Vienna Classification )\nFiling date\n21/08/2024\nRegistration date\n11/01/2025\nExpiry date\n21/08/2034\nDesignation date\nFiling language\nPortuguese\nSecond language\nEnglish\nApplication reference\n03.285"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": false,
+        "tmviewStatus": "Registered",
+        "nationalStatus": "published"
+      }
+    },
+    {
+      "id": "GB-UK00004152137",
+      "mark": "SSV",
+      "office": "UK IPO",
+      "app": "UK00004152137",
+      "tmView": {
+        "ok": true,
+        "status": "Registered",
+        "registrationDate": "2025-04-18",
+        "expirationDate": "2035-01-24",
+        "oppositionPeriodEnd": "2025-04-07",
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "Rheia IP Limited"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": null,
+        "flags": [],
+        "textHash": 580,
+        "sample": "Skip to main content\n Intellectual Property Office\nApply to register a trade mark\nSecurity check\nWhen we notice a high number of visits from a single user, we perform a security check to ensure the user is genuine. This is to keep our services safe from automated systems which are attempting to extract copies of our data (also known as ‘data mining’).\nThis security check is required for you to continue to the apply to register a trade mark service.\nSupport links\n All content is available under the Open Government Licence v3.0, except where otherwise stated\n© Crown copyright"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": false,
+        "tmviewStatus": "Registered",
+        "nationalStatus": null
+      }
+    },
+    {
+      "id": "GB-UK00004152144",
+      "mark": "SSV.NETWORK",
+      "office": "UK IPO",
+      "app": "UK00004152144",
+      "tmView": {
+        "ok": true,
+        "status": "Registered",
+        "registrationDate": "2025-04-18",
+        "expirationDate": "2035-01-24",
+        "oppositionPeriodEnd": "2025-04-07",
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "Rheia IP Limited"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": null,
+        "flags": [],
+        "textHash": 580,
+        "sample": "Skip to main content\n Intellectual Property Office\nApply to register a trade mark\nSecurity check\nWhen we notice a high number of visits from a single user, we perform a security check to ensure the user is genuine. This is to keep our services safe from automated systems which are attempting to extract copies of our data (also known as ‘data mining’).\nThis security check is required for you to continue to the apply to register a trade mark service.\nSupport links\n All content is available under the Open Government Licence v3.0, except where otherwise stated\n© Crown copyright"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": false,
+        "tmviewStatus": "Registered",
+        "nationalStatus": null
+      }
+    },
+    {
+      "id": "AU-2541093",
+      "mark": "SSV",
+      "office": "IP Australia",
+      "app": "2541093",
+      "tmView": {
+        "ok": true,
+        "status": "Registered",
+        "registrationDate": "2025-11-03",
+        "expirationDate": "2035-04-17",
+        "oppositionPeriodEnd": null,
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "Adrian M Trioli Patent and Trade Mark Attorney"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": [
+          {
+            "date": "2025-11-03",
+            "desc": "Status change to registered/protected"
+          },
+          {
+            "date": "2025-11-03",
+            "desc": "Ip right registration published"
+          },
+          {
+            "date": "2025-11-03",
+            "desc": "Ip right registered correspondence sent"
+          },
+          {
+            "date": "2025-08-27",
+            "desc": "Ip right has been examined"
+          },
+          {
+            "date": "2025-08-27",
+            "desc": "Ip right acceptance published"
+          },
+          {
+            "date": "2025-08-27",
+            "desc": "Application accepted correspondence sent"
+          },
+          {
+            "date": "2025-04-29",
+            "desc": "Word and image indexing completed"
+          },
+          {
+            "date": "2025-04-29",
+            "desc": "Status change to accepted"
+          },
+          {
+            "date": "2025-04-29",
+            "desc": "Examination expedited"
+          },
+          {
+            "date": "2025-04-29",
+            "desc": "Early acceptance notice correspondence sent"
+          },
+          {
+            "date": "2025-04-29",
+            "desc": "Awaiting examination"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Trade mark representation updated"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Status change to received"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Status change to published"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Status change to filed"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Minimum filing requirements considered"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Ip right filed published"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Ip right filed correspondence sent"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Application received"
+          }
+        ]
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": "registered",
+        "flags": [
+          "opposition",
+          "revocation"
+        ],
+        "textHash": 9030,
+        "sample": "Australian Trade Mark Search\nAustralian Trade Mark Search is the Australian Government’s trade mark search system.\nHome\n  Quick search Trade mark 2541093\n Advanced search\n1\nCurrently registered\nFiled\nFiled\n17 Apr 2025\nExamined\nFirst report\n29 Apr 2025\nAcceptance / Opposition\nAcceptance advertised / published\n27 Aug 2025\nRegistered\nRenewal due\n17 Apr 2035\n  View details\nNumber 2541093\nWords SSV Status ● Registered: Registered/protected Priority date 24 Jan 2025 (Convention) Classes 9, 42 Kind Word\nSSV\nGoods & Services\nClass 9: Application software; Downloadable computer software for blockchain technology; Downloadable computer software for managing crypto asset transactions using blockchain technology; Data and file management and database software; Cryptography software; Utility, security and cryptography software; Data mining software; Downloadable cryptographic keys for receiving and s"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": true,
+        "tmviewStatus": "Registered",
+        "nationalStatus": "registered"
+      }
+    },
+    {
+      "id": "AU-2541094",
+      "mark": "SSV.NETWORK",
+      "office": "IP Australia",
+      "app": "2541094",
+      "tmView": {
+        "ok": true,
+        "status": "Filed",
+        "registrationDate": null,
+        "expirationDate": null,
+        "oppositionPeriodEnd": null,
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "Adrian M Trioli Patent and Trade Mark Attorney"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": [
+          {
+            "date": "2026-04-29",
+            "desc": "Acceptance due date reminder correspondence sent"
+          },
+          {
+            "date": "2025-04-29",
+            "desc": "Word and image indexing completed"
+          },
+          {
+            "date": "2025-04-29",
+            "desc": "Ip right has been examined"
+          },
+          {
+            "date": "2025-04-29",
+            "desc": "Examination expedited"
+          },
+          {
+            "date": "2025-04-29",
+            "desc": "Awaiting examination"
+          },
+          {
+            "date": "2025-04-29",
+            "desc": "Adverse report (examination) correspondence sent"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Trade mark representation updated"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Status change to received"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Status change to published"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Status change to filed"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Minimum filing requirements considered"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Ip right filed published"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Ip right filed correspondence sent"
+          },
+          {
+            "date": "2025-04-17",
+            "desc": "Application received"
+          }
+        ]
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": "Filed",
+        "flags": [
+          "opposition",
+          "revocation",
+          "acceptance due"
+        ],
+        "textHash": 7381,
+        "sample": "Australian Trade Mark Search\nAustralian Trade Mark Search is the Australian Government’s trade mark search system.\nHome\n  Quick search Trade mark 2541094\n Advanced search\n1\nApplication Being Considered\nFiled\nFiled\n17 Apr 2025\nBeing Examined\nFirst report\n29 Apr 2025\nAcceptance due\n29 Jul 2026\nAcceptance / Opposition\nRegistered\n  View details\nNumber 2541094\nWords SSV.NETWORK Image description DIAMONDS FORM DIAMOND,DIVIDED Status ● Published: Under examination Priority date 26 Mar 2025 (Convention) Classes 9, 42 Kind Figurative\nGoods & Services\nClass 9: Application software; Downloadable computer software for blockchain technology; Downloadable computer software for managing crypto asset transactions using blockchain technology; Data and file management and database software; Cryptography software; Utility, security and cryptography software; Data mining software; Downloadable cryptographic"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": true,
+        "tmviewStatus": "Filed",
+        "nationalStatus": "Filed"
+      }
+    },
+    {
+      "id": "CA-2398060",
+      "mark": "SSV",
+      "office": "CIPO",
+      "app": "2398060",
+      "tmView": {
+        "ok": true,
+        "status": "Filed",
+        "registrationDate": null,
+        "expirationDate": null,
+        "oppositionPeriodEnd": null,
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "CASSELS BROCK & BLACKWELL LLP"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": null,
+        "flags": [],
+        "textHash": 239,
+        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398060\nClient IP: 20.171.22.167\nAttack ID: 20000051\nMessage ID: 009315671938"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": true,
+        "tmviewStatus": "Filed",
+        "nationalStatus": null
+      }
+    },
+    {
+      "id": "CA-2398059",
+      "mark": "SSV.NETWORK & DESIGN",
+      "office": "CIPO",
+      "app": "2398059",
+      "tmView": {
+        "ok": true,
+        "status": "Filed",
+        "registrationDate": null,
+        "expirationDate": null,
+        "oppositionPeriodEnd": null,
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "CASSELS BROCK & BLACKWELL LLP"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": null,
+        "flags": [],
+        "textHash": 239,
+        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398059\nClient IP: 20.171.22.167\nAttack ID: 20000051\nMessage ID: 009315672195"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": true,
+        "tmviewStatus": "Filed",
+        "nationalStatus": null
+      }
+    },
+    {
+      "id": "NZ-1290682",
+      "mark": "SSV",
+      "office": "IPONZ",
+      "app": "1290682",
+      "tmView": {
+        "ok": true,
+        "status": "Filed",
+        "registrationDate": null,
+        "expirationDate": null,
+        "oppositionPeriodEnd": null,
+        "applicants": [
+          "SSV Foundation"
+        ],
+        "representatives": [
+          "Adrian M Trioli Patent and Trade Mark Attorney"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": false,
+        "reason": "page.evaluate: TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them\n    at Sys.WebForms.PageRequestManager._doPostBack (https://app.iponz.govt.nz/app/ScriptResource.axd?d=PkBHudMXcUvfCw627f6nkf3MGRE6zNimtbtUR4b4k7h-_rAGo8TZopsEDs2z-YM7hXLJf5jcduNv-uPfYyBfhWXXWJXh54PbCSOYMU2FIUz5LH6RL4hMgNi3C9jvQrE5VHas80EzWxntQ8ric4hLdvof2Gt11k06QziCQSYDDnqmKno2tigukGxSUCH2w_3O0&t=511fa37d:5:13771)\n    at Sys.WebForms.PageRequestManager._doPostBackWithOptions (https://app.iponz.govt.nz/app/ScriptResource.axd?d=PkBHudMXcUvfCw627f6nkf3MGRE6zNimtbtUR4b4k7h-_rAGo8TZopsEDs2z-YM7hXLJf5jcduNv-uPfYyBfhWXXWJXh54PbCSOYMU2FIUz5LH6RL4hMgNi3C9jvQrE5VHas80EzWxntQ8ric4hLdvof2Gt11k06QziCQSYDDnqmKno2tigukGxSUCH2w_3O0&t=511fa37d:5:16026)\n    at https://app.iponz.govt.nz/app/ScriptResource.axd?d=43ueKijv6myQ79ZAMT-0nnb8LnoO23wa0R4z4DaqPVLhib1_hmPKj8AZEIWQ9kplPkpv-hetZCtv3co1vvajGXPHVQRBGnCCSgpTSQqmlioGecLNH1HcB7MOWCED6p5dWVSH4DVuJ7h_0-iAmT1PJvVAM6kJBy2uMOYMkBCY0RI1&t=511fa37d:5:307\n    at eval (eval at evaluate (:234:30), <anonymous>:6:9)\n    at UtilityScript.evaluate (<anonymous>:236:17)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+      },
+      "discrepancy": {
+        "comparable": false
+      }
+    },
+    {
+      "id": "BR-940265788",
+      "mark": "SSV",
+      "office": "INPI",
+      "app": "940265788",
+      "tmView": {
+        "ok": true,
+        "status": "Filed",
+        "registrationDate": null,
+        "expirationDate": null,
+        "oppositionPeriodEnd": "2025-11-01",
+        "applicants": [
+          "SSV FOUNDATION"
+        ],
+        "representatives": [
+          "LEÃO PROPRIEDADE INTELECTUAL"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": null,
+        "flags": [],
+        "textHash": 675,
+        "sample": "\nBRASIL\nAcesso à informação\nParticipeServiçosLegislaçãoCanais\nInstituto Nacional da\nPropriedade Industrial\nMinistério do Desenvolvimento, Indústria, Comércio e Serviços\n ALERTA CONTRA FRAUDES: o INPI não envia boletos nem cobranças. Leia mais aqui.\npePI - Pesquisa em Propriedade Industrial\nLogin:\nSenha:\nNão possui login? Cadastre-se aqui.\nEsqueceu Usuário/Senha? Clique aqui.\nPara realizar a Pesquisa anonimamente aperte apenas o botão Continuar....\nO preenchimento do Login e Senha não é obrigatório. Entretanto, irá permitir acessos a mais serviços, como por exemplo, a disponibilização de documentos.\nEntrar com GOV.BR\nRua Mayrink Veiga, 9 - Centro - RJ - CEP: 20090-910",
+        "note": "INPI landing reached; per-processo lookup is session-gated — verify manually if flagged"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": true,
+        "tmviewStatus": "Filed",
+        "nationalStatus": null
+      }
+    },
+    {
+      "id": "BR-940266032",
+      "mark": "SSV",
+      "office": "INPI",
+      "app": "940266032",
+      "tmView": {
+        "ok": true,
+        "status": "Filed",
+        "registrationDate": null,
+        "expirationDate": null,
+        "oppositionPeriodEnd": "2025-11-01",
+        "applicants": [
+          "SSV FOUNDATION"
+        ],
+        "representatives": [
+          "LEÃO PROPRIEDADE INTELECTUAL"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": null,
+        "flags": [],
+        "textHash": 675,
+        "sample": "\nBRASIL\nAcesso à informação\nParticipeServiçosLegislaçãoCanais\nInstituto Nacional da\nPropriedade Industrial\nMinistério do Desenvolvimento, Indústria, Comércio e Serviços\n ALERTA CONTRA FRAUDES: o INPI não envia boletos nem cobranças. Leia mais aqui.\npePI - Pesquisa em Propriedade Industrial\nLogin:\nSenha:\nNão possui login? Cadastre-se aqui.\nEsqueceu Usuário/Senha? Clique aqui.\nPara realizar a Pesquisa anonimamente aperte apenas o botão Continuar....\nO preenchimento do Login e Senha não é obrigatório. Entretanto, irá permitir acessos a mais serviços, como por exemplo, a disponibilização de documentos.\nEntrar com GOV.BR\nRua Mayrink Veiga, 9 - Centro - RJ - CEP: 20090-910",
+        "note": "INPI landing reached; per-processo lookup is session-gated — verify manually if flagged"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": true,
+        "tmviewStatus": "Filed",
+        "nationalStatus": null
+      }
+    },
+    {
+      "id": "BR-940267160",
+      "mark": "ssv.network",
+      "office": "INPI",
+      "app": "940267160",
+      "tmView": {
+        "ok": true,
+        "status": "Filed",
+        "registrationDate": null,
+        "expirationDate": null,
+        "oppositionPeriodEnd": "2025-10-25",
+        "applicants": [
+          "SSV FOUNDATION"
+        ],
+        "representatives": [
+          "LEÃO PROPRIEDADE INTELECTUAL"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": null,
+        "flags": [],
+        "textHash": 675,
+        "sample": "\nBRASIL\nAcesso à informação\nParticipeServiçosLegislaçãoCanais\nInstituto Nacional da\nPropriedade Industrial\nMinistério do Desenvolvimento, Indústria, Comércio e Serviços\n ALERTA CONTRA FRAUDES: o INPI não envia boletos nem cobranças. Leia mais aqui.\npePI - Pesquisa em Propriedade Industrial\nLogin:\nSenha:\nNão possui login? Cadastre-se aqui.\nEsqueceu Usuário/Senha? Clique aqui.\nPara realizar a Pesquisa anonimamente aperte apenas o botão Continuar....\nO preenchimento do Login e Senha não é obrigatório. Entretanto, irá permitir acessos a mais serviços, como por exemplo, a disponibilização de documentos.\nEntrar com GOV.BR\nRua Mayrink Veiga, 9 - Centro - RJ - CEP: 20090-910",
+        "note": "INPI landing reached; per-processo lookup is session-gated — verify manually if flagged"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": true,
+        "tmviewStatus": "Filed",
+        "nationalStatus": null
+      }
+    },
+    {
+      "id": "BR-940267543",
+      "mark": "ssv.network",
+      "office": "INPI",
+      "app": "940267543",
+      "tmView": {
+        "ok": true,
+        "status": "Filed",
+        "registrationDate": null,
+        "expirationDate": null,
+        "oppositionPeriodEnd": "2025-10-25",
+        "applicants": [
+          "SSV FOUNDATION"
+        ],
+        "representatives": [
+          "LEÃO PROPRIEDADE INTELECTUAL"
+        ],
+        "oppositions": 0,
+        "cancellations": 0,
+        "events": []
+      },
+      "national": {
+        "ok": true,
+        "source": "scrape",
+        "statusLine": null,
+        "flags": [],
+        "textHash": 675,
+        "sample": "\nBRASIL\nAcesso à informação\nParticipeServiçosLegislaçãoCanais\nInstituto Nacional da\nPropriedade Industrial\nMinistério do Desenvolvimento, Indústria, Comércio e Serviços\n ALERTA CONTRA FRAUDES: o INPI não envia boletos nem cobranças. Leia mais aqui.\npePI - Pesquisa em Propriedade Industrial\nLogin:\nSenha:\nNão possui login? Cadastre-se aqui.\nEsqueceu Usuário/Senha? Clique aqui.\nPara realizar a Pesquisa anonimamente aperte apenas o botão Continuar....\nO preenchimento do Login e Senha não é obrigatório. Entretanto, irá permitir acessos a mais serviços, como por exemplo, a disponibilização de documentos.\nEntrar com GOV.BR\nRua Mayrink Veiga, 9 - Centro - RJ - CEP: 20090-910",
+        "note": "INPI landing reached; per-processo lookup is session-gated — verify manually if flagged"
+      },
+      "discrepancy": {
+        "comparable": true,
+        "agree": true,
+        "tmviewStatus": "Filed",
+        "nationalStatus": null
+      }
+    }
+  ]
+}
