@@ -16,7 +16,6 @@ import { chromium } from 'playwright';
 import { writeFileSync } from 'fs';
 import { MARKS, TMVIEW_SEARCH_BODY } from './portfolio.mjs';
 
-const USPTO_API_KEY = process.env.USPTO_API_KEY || null;
 const NAV_TIMEOUT = 30000;
 const POST_NAV_WAIT = 4000;
 const nowISO = () => new Date().toISOString();
@@ -89,24 +88,82 @@ function tmviewFieldsFor(mark, tmv) {
 
 // ---------- LAYER 2: national registers ----------
 
-// USPTO — official TSDR JSON API (reliable from datacenter; needs a free API key).
-async function fetchTSDR(serial) {
-  if (!USPTO_API_KEY) return { ok: false, reason: 'USPTO_API_KEY secret not set — US source paused' };
+// USPTO — public TMSearch API (KEYLESS). The tmsearch.uspto.gov frontend POSTs an
+// Elasticsearch query to /prod-v1-0-0/tmsearch anonymously (auth/sessions/me returns 404
+// for anonymous visitors), so we do the same from a page on that origin. Two strategies:
+//   1) direct query on the serial (id / registrationId fields);
+//   2) if that returns nothing (field-mapping uncertainty), the frontend's own proven
+//      wordmark query ("SSV") — every hit's source carries id, so we match serials by
+//      READING id rather than querying it, which works regardless of how id is indexed.
+// Note: the API camelCases the ES envelope — hit.id = serial, hit.source = fields.
+async function fetchUSPTOAll(browser, serials) {
+  const page = await browser.newPage();
   try {
-    const r = await fetch(`https://tsdrapi.uspto.gov/ts/cd/casestatus/sn${serial}/info.json`, {
-      headers: { 'USPTO-API-KEY': USPTO_API_KEY },
-    });
-    if (!r.ok) return { ok: false, reason: 'TSDR HTTP ' + r.status };
-    const j = await r.json();
-    const md = j?.trademarks?.[0]?.status || {};
-    return {
-      ok: true, source: 'TSDR API',
-      status: md.statusDefinitionText || md.status || null,
-      statusCode: md.statusCode || null,
-      statusDate: (md.statusDate || '').slice(0, 10) || null,
-      raw: md,
-    };
-  } catch (e) { return { ok: false, reason: String(e.message || e) }; }
+    await page.goto('https://tmsearch.uspto.gov/search/search-information', { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
+    await page.waitForTimeout(3000);
+    const out = await page.evaluate(async (sns) => {
+      async function q(body) {
+        const r = await fetch('/prod-v1-0-0/tmsearch', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
+        });
+        if (!r.ok) return { httpError: r.status };
+        return r.json();
+      }
+      const bySerial = {};
+      // Strategy 1: direct id / registrationId queries.
+      for (const sn of sns) {
+        const j = await q({
+          query: { bool: { should: [{ term: { id: sn } }, { match_phrase: { id: sn } }, { term: { registrationId: sn } }], minimum_should_match: 1 } },
+          size: 5, track_total_hits: true,
+        });
+        if (j.httpError) { bySerial[sn] = { httpError: j.httpError }; continue; }
+        const rec = ((j.hits && j.hits.hits) || []).find((h) => String(h.id) === String(sn));
+        if (rec) bySerial[sn] = { hit: { serial: rec.id, ...(rec.source || {}) }, via: 'id-query' };
+      }
+      // Strategy 2: wordmark sweep for any misses; match serials by reading id.
+      if (sns.some((sn) => !bySerial[sn] || !bySerial[sn].hit)) {
+        const j = await q({
+          query: { bool: { must: [{ match: { WM: { query: 'SSV' } } }] } },
+          size: 100, track_total_hits: true,
+        });
+        if (!j.httpError) {
+          const recs = (j.hits && j.hits.hits) || [];
+          for (const sn of sns) {
+            if (bySerial[sn] && bySerial[sn].hit) continue;
+            const rec = recs.find((h) => String(h.id) === String(sn));
+            if (rec) bySerial[sn] = { hit: { serial: rec.id, ...(rec.source || {}) }, via: 'wordmark-sweep' };
+          }
+        }
+      }
+      return bySerial;
+    }, serials.map(String));
+    const results = {};
+    for (const sn of serials) {
+      const e = out[sn];
+      if (!e || !e.hit) {
+        results[sn] = { ok: false, reason: e && e.httpError ? 'TMSearch HTTP ' + e.httpError : 'serial not found via id-query or wordmark sweep' };
+        continue;
+      }
+      const hit = e.hit;
+      const alive = hit.alive === true || hit.alive === 'true';
+      const status = alive
+        ? (hit.registrationDate ? 'Registered' : 'Live/Pending')
+        : (hit.abandonDate ? 'Dead/Abandoned' : (hit.cancelDate ? 'Dead/Cancelled' : 'Dead'));
+      const owner = Array.isArray(hit.ownerName) ? hit.ownerName[0] : (hit.ownerName || null);
+      results[sn] = {
+        ok: true, source: 'USPTO TMSearch (' + e.via + ')', status, alive,
+        statusCode: hit.statusCode != null ? hit.statusCode : null,
+        registrationDate: (hit.registrationDate || '').slice(0, 10) || null,
+        filedDate: (hit.filedDate || '').slice(0, 10) || null,
+        abandonDate: (hit.abandonDate || '').slice(0, 10) || null,
+        cancelDate: (hit.cancelDate || '').slice(0, 10) || null,
+        owner, wordmark: hit.wordmark || hit.markName || null,
+      };
+    }
+    return results;
+  } catch (e) {
+    return Object.fromEntries(serials.map((sn) => [sn, { ok: false, reason: String(e.message || e) }]));
+  } finally { await page.close().catch(() => {}); }
 }
 
 // Generic scrape: load the validated detail URL, wait for the SPA, return visible text.
@@ -129,38 +186,56 @@ async function scrapeDetail(browser, mark) {
   } finally { await page.close().catch(() => {}); }
 }
 
-// IPONZ — no stable deep link; drive the search form, then read the case.
+// IPONZ — public search page (per Ivan: PublicSearch.aspx, simpler than the old Qbe form).
+// The page is ASP.NET; the previous evaluate-based postback threw in fresh headless
+// sessions, so this version uses ONLY native Playwright fill/click and discovers the
+// form controls at runtime from a list of candidate selectors. Any miss soft-fails.
 async function scrapeIPONZ(browser, mark) {
   const page = await browser.newPage();
   try {
-    await page.goto('https://app.iponz.govt.nz/app/Extra/IP/TM/Qbe.aspx?sid=0&op=EXTRA_tm_qbe&directAccess=true',
+    await page.goto('https://app.iponz.govt.nz/app/Extra/IP/TM/PublicSearch/PublicSearch.aspx?op=EXTRA_TM_PublicSearch&fcoOp=EXTRA_Default',
       { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
     await page.waitForTimeout(POST_NAV_WAIT);
-    await page.evaluate((n) => {
-      const el = document.getElementById('MainContent_ctrlTMSearch_txtAppNr');
-      if (el) el.value = n;
-      // eslint-disable-next-line no-undef
-      if (typeof WebForm_DoPostBackWithOptions === 'function') {
-        WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(
-          'ctl00$MainContent$ctrlTMSearch$lnkbtnSearch', '', true,
-          'MainContent_ctrlTMSearchValidationGroup', '', false, true));
-      }
-    }, mark.national.appNumber);
-    await page.waitForTimeout(POST_NAV_WAIT);
-    const text = await page.evaluate(() => document.body.innerText || '');
-    if (!text.includes(mark.national.appNumber) && !/SSV/i.test(text)) {
-      return { ok: false, reason: 'IPONZ result not reached (form/session)' };
+    const inputSel = ['input[id*="Number" i]', 'input[name*="Number" i]', 'input[id*="Keyword" i]',
+      'input[id*="txtSearch" i]', 'input[id*="Word" i]', 'input[type="text"]'];
+    let filled = false;
+    for (const sel of inputSel) {
+      const el = page.locator(sel).first();
+      if (await el.count()) { try { await el.fill(mark.national.appNumber, { timeout: 5000 }); filled = true; break; } catch (e) {} }
     }
-    const statusLine = (text.match(/(Registered|Under Examination|Accepted|Opposed|Refused|Withdrawn|Lapsed)[^\n]{0,60}/i) || [null])[0];
-    return { ok: true, source: 'IPONZ form', statusLine, sample: text.slice(0, 900) };
+    if (!filled) return { ok: false, reason: 'IPONZ: no fillable search input found on PublicSearch page' };
+    const btnSel = ['input[type="submit"][value*="Search" i]', 'button:has-text("Search")',
+      'a:has-text("Search")', 'input[type="submit"]'];
+    let clicked = false;
+    for (const sel of btnSel) {
+      const el = page.locator(sel).first();
+      if (await el.count()) { try { await el.click({ timeout: 5000 }); clicked = true; break; } catch (e) {} }
+    }
+    if (!clicked) { try { await page.keyboard.press('Enter'); } catch (e) {} }
+    await page.waitForTimeout(POST_NAV_WAIT + 3000);
+    let text = await page.evaluate(() => document.body.innerText || '');
+    // If a results list shows our number, open the record for full status detail.
+    if (text.includes(mark.national.appNumber)) {
+      const link = page.locator('a', { hasText: mark.national.appNumber }).first();
+      if (await link.count()) {
+        try { await link.click({ timeout: 5000 }); await page.waitForTimeout(POST_NAV_WAIT); text = await page.evaluate(() => document.body.innerText || ''); } catch (e) {}
+      }
+    }
+    if (!text.includes(mark.national.appNumber) && !/SSV/i.test(text)) {
+      return { ok: false, reason: 'IPONZ: search returned no matching record (form/session path)' };
+    }
+    const statusLine = (text.match(/(Registered|Under Examination|Being Examined|Accepted|Opposed|Refused|Withdrawn|Lapsed|Abandoned|Removed)[^\n]{0,60}/i) || [null])[0];
+    const flags = ['opposition', 'proceeding', 'hearing', 'non-use', 'revocation', 'invalidity']
+      .filter((k) => new RegExp(k, 'i').test(text));
+    return { ok: true, source: 'IPONZ PublicSearch', statusLine, flags, sample: text.slice(0, 900) };
   } catch (e) {
     return { ok: false, reason: String(e.message || e) };
   } finally { await page.close().catch(() => {}); }
 }
 
-async function fetchNational(browser, mark) {
+async function fetchNational(browser, mark, usptoResults) {
   const k = mark.national.kind;
-  if (k === 'tsdr-api') return fetchTSDR(mark.national.serial);
+  if (mark.office === 'USPTO') return (usptoResults && usptoResults[mark.national.serial]) || { ok: false, reason: 'USPTO batch did not run' };
   if (k === 'form' && mark.office === 'IPONZ') return scrapeIPONZ(browser, mark);
   if (k === 'form' && mark.office === 'INPI') {
     // INPI portal is session-based and was under maintenance on 2026-07-07; best-effort scrape of the public search.
@@ -173,13 +248,20 @@ async function fetchNational(browser, mark) {
 
 // ---------- discrepancy logic ----------
 function normStatus(s) { return String(s || '').toLowerCase().replace(/[^a-z]/g, ''); }
+// Coarse life-state bucket. The PRIMARY alerting mechanism is per-source status CHANGE
+// (handled in Brains by diffing each source against the previous snapshot), so a granular
+// difference like "published" vs "registered" is NOT a discrepancy — both are non-dead.
+// A cross-source discrepancy is only raised for a genuine conflict: one source says the
+// mark is dead/abandoned/cancelled while the other says it is alive or registered.
+function lifeState(x) {
+  const n = normStatus(x);
+  if (/refused|withdrawn|lapsed|removed|abandon|cancel|dead|expired|invalid|revoked/.test(n)) return 'dead';
+  return 'alive'; // registered, published, filed, examined, accepted, pending, opposed, live…
+}
 function compareSources(tmv, nat) {
   if (!tmv?.ok || !nat?.ok) return { comparable: false };
-  const t = normStatus(tmv.status);
-  const nText = normStatus(nat.status || nat.statusLine);
-  const isReg = (x) => /registered|registrado/.test(x);
-  const agree = isReg(t) === isReg(nText);
-  return { comparable: true, agree, tmviewStatus: tmv.status || null, nationalStatus: nat.status || nat.statusLine || null };
+  const conflict = (lifeState(tmv.status) === 'dead') !== (lifeState(nat.status || nat.statusLine) === 'dead');
+  return { comparable: true, agree: !conflict, tmviewStatus: tmv.status || null, nationalStatus: nat.status || nat.statusLine || null };
 }
 
 // ---------- run (nothing here is allowed to abort the snapshot) ----------
@@ -191,7 +273,9 @@ try {
   const tmvPage = await browser.newPage();
   tmv = await fetchTMView(tmvPage);
   await tmvPage.close().catch(() => {});
-  nationalResults = await mapLimit(MARKS, 3, (m) => fetchNational(browser, m));
+  const usSerials = MARKS.filter((m) => m.office === 'USPTO').map((m) => m.national.serial);
+  const usptoResults = await fetchUSPTOAll(browser, usSerials);
+  nationalResults = await mapLimit(MARKS, 3, (m) => fetchNational(browser, m, usptoResults));
 } catch (e) {
   tmv = { ok: false, reason: 'browser launch/run error: ' + String(e.message || e) };
 } finally {
