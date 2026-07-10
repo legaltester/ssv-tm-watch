@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-10T12:41:29.301Z",
+  "fetched_at": "2026-07-10T12:58:14.916Z",
   "sources": {
     "tmview": "ok (15 marks)"
   },
@@ -671,8 +671,8 @@
         "source": "scrape",
         "statusLine": null,
         "flags": [],
-        "textHash": 241,
-        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398060\nClient IP: 172.178.118.195\nAttack ID: 20000051\nMessage ID: 009323958405"
+        "textHash": 238,
+        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398060\nClient IP: 20.81.47.115\nAttack ID: 20000051\nMessage ID: 009324102844"
       },
       "discrepancy": {
         "comparable": true,
@@ -707,8 +707,8 @@
         "source": "scrape",
         "statusLine": null,
         "flags": [],
-        "textHash": 241,
-        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398059\nClient IP: 172.178.118.195\nAttack ID: 20000051\nMessage ID: 009323958735"
+        "textHash": 238,
+        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398059\nClient IP: 20.81.47.115\nAttack ID: 20000051\nMessage ID: 009324103453"
       },
       "discrepancy": {
         "comparable": true,
