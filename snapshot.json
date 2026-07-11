@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-07-10T12:58:14.916Z",
+  "fetched_at": "2026-07-11T09:13:12.347Z",
   "sources": {
     "tmview": "ok (15 marks)"
   },
@@ -312,7 +312,7 @@
           "cancellation"
         ],
         "textHash": 6192,
-        "sample": "eSearch plus\nThe EUIPO’s database access\nSearch\nAdvanced search\nEUTM file information\nSSV\n019056030\n eRegister\n Certificate\n Print\nLog in to access advanced functionalities Log in Sign up\nTimeline\n17/07/2024\nEUTM applicationreceived\n22/08/2024\nApplicationpublished\nExamination\n0 oppositions received\n22/11/2024\nEnd ofopposition period\n02/12/2024\nEUTM registeredand published\nOpposition proceedings\n17/07/2034\nEUTM expiry date\n10/07/2026\nRegistered EUTM\nActions and communications\nEUTM\nTrade mark information\nName\nSSV\nFiling number\n019056030\nBasis\nEUTM on which IA is based\nDate of receipt\n17/07/2024\nType\nWord\nNature\nIndividual\nNice classes\n9, 42 ( Nice Classification )\nVienna Classification\nFiling date\n17/07/2024\nRegistration date\n29/11/2024\nExpiry date\n17/07/2034\nDesignation date\nFiling language\nPortuguese\nSecond language\nEnglish\nApplication reference\n2.54APC/HL\nTrade mark status\nRegistered\nAc"
+        "sample": "eSearch plus\nThe EUIPO’s database access\nSearch\nAdvanced search\nEUTM file information\nSSV\n019056030\n eRegister\n Certificate\n Print\nLog in to access advanced functionalities Log in Sign up\nTimeline\n17/07/2024\nEUTM applicationreceived\n22/08/2024\nApplicationpublished\nExamination\n0 oppositions received\n22/11/2024\nEnd ofopposition period\n02/12/2024\nEUTM registeredand published\nOpposition proceedings\n17/07/2034\nEUTM expiry date\n11/07/2026\nRegistered EUTM\nActions and communications\nEUTM\nTrade mark information\nName\nSSV\nFiling number\n019056030\nBasis\nEUTM on which IA is based\nDate of receipt\n17/07/2024\nType\nWord\nNature\nIndividual\nNice classes\n9, 42 ( Nice Classification )\nVienna Classification\nFiling date\n17/07/2024\nRegistration date\n29/11/2024\nExpiry date\n17/07/2034\nDesignation date\nFiling language\nPortuguese\nSecond language\nEnglish\nApplication reference\n2.54APC/HL\nTrade mark status\nRegistered\nAc"
       },
       "discrepancy": {
         "comparable": true,
@@ -351,7 +351,7 @@
           "cancellation"
         ],
         "textHash": 5959,
-        "sample": "eSearch plus\nThe EUIPO’s database access\nSearch\nAdvanced search\nEUTM file information\nssv.network\n019070030\n eRegister\n Certificate\n Print\nLog in to access advanced functionalities Log in Sign up\nTimeline\n21/08/2024\nEUTM applicationreceived\n04/10/2024\nApplicationpublished\nExamination\n0 oppositions received\n07/01/2025\nEnd ofopposition period\n22/01/2025\nEUTM registeredand published\nOpposition proceedings\n21/08/2034\nEUTM expiry date\n10/07/2026\nRegistered EUTM\nActions and communications\nEUTM\nTrade mark information\nName\nssv.network\nFiling number\n019070030\nBasis\nEUTM\nDate of receipt\n21/08/2024\nType\nFigurative\nNature\nIndividual\nNice classes\n9, 42 ( Nice Classification )\nVienna Classification\n26.07.05 ( Vienna Classification )\nFiling date\n21/08/2024\nRegistration date\n11/01/2025\nExpiry date\n21/08/2034\nDesignation date\nFiling language\nPortuguese\nSecond language\nEnglish\nApplication reference\n03.285"
+        "sample": "eSearch plus\nThe EUIPO’s database access\nSearch\nAdvanced search\nEUTM file information\nssv.network\n019070030\n eRegister\n Certificate\n Print\nLog in to access advanced functionalities Log in Sign up\nTimeline\n21/08/2024\nEUTM applicationreceived\n04/10/2024\nApplicationpublished\nExamination\n0 oppositions received\n07/01/2025\nEnd ofopposition period\n22/01/2025\nEUTM registeredand published\nOpposition proceedings\n21/08/2034\nEUTM expiry date\n11/07/2026\nRegistered EUTM\nActions and communications\nEUTM\nTrade mark information\nName\nssv.network\nFiling number\n019070030\nBasis\nEUTM\nDate of receipt\n21/08/2024\nType\nFigurative\nNature\nIndividual\nNice classes\n9, 42 ( Nice Classification )\nVienna Classification\n26.07.05 ( Vienna Classification )\nFiling date\n21/08/2024\nRegistration date\n11/01/2025\nExpiry date\n21/08/2034\nDesignation date\nFiling language\nPortuguese\nSecond language\nEnglish\nApplication reference\n03.285"
       },
       "discrepancy": {
         "comparable": true,
@@ -371,12 +371,8 @@
         "registrationDate": "2025-04-18",
         "expirationDate": "2035-01-24",
         "oppositionPeriodEnd": "2025-04-07",
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "Rheia IP Limited"
-        ],
+        "applicants": [],
+        "representatives": [],
         "oppositions": 0,
         "cancellations": 0,
         "events": []
@@ -407,12 +403,8 @@
         "registrationDate": "2025-04-18",
         "expirationDate": "2035-01-24",
         "oppositionPeriodEnd": "2025-04-07",
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "Rheia IP Limited"
-        ],
+        "applicants": [],
+        "representatives": [],
         "oppositions": 0,
         "cancellations": 0,
         "events": []
@@ -671,8 +663,8 @@
         "source": "scrape",
         "statusLine": null,
         "flags": [],
-        "textHash": 238,
-        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398060\nClient IP: 20.81.47.115\nAttack ID: 20000051\nMessage ID: 009324102844"
+        "textHash": 239,
+        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398060\nClient IP: 20.40.254.230\nAttack ID: 20000051\nMessage ID: 016423708733"
       },
       "discrepancy": {
         "comparable": true,
@@ -707,8 +699,8 @@
         "source": "scrape",
         "statusLine": null,
         "flags": [],
-        "textHash": 238,
-        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398059\nClient IP: 20.81.47.115\nAttack ID: 20000051\nMessage ID: 009324103453"
+        "textHash": 239,
+        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398059\nClient IP: 20.40.254.230\nAttack ID: 20000051\nMessage ID: 016423709061"
       },
       "discrepancy": {
         "comparable": true,
