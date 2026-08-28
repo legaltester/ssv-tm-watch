@@ -1,7 +1,7 @@
 {
-  "fetched_at": "2026-08-27T15:14:51.639Z",
+  "fetched_at": "2026-08-28T16:36:36.523Z",
   "sources": {
-    "tmview": "ok (16 marks)"
+    "tmview": "ok (0 marks)"
   },
   "national_source_health": {
     "US-99104870": "ok",
@@ -28,125 +28,8 @@
       "office": "USPTO",
       "app": "99104870",
       "tmView": {
-        "ok": true,
-        "status": "Filed",
-        "registrationDate": "2025-04-18",
-        "expirationDate": null,
-        "oppositionPeriodEnd": null,
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "Roy D. Gross"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": [
-          {
-            "date": "2026-07-16",
-            "desc": "Notification of non-final action e-mailed"
-          },
-          {
-            "date": "2026-07-16",
-            "desc": "Non-final action e-mailed"
-          },
-          {
-            "date": "2026-07-16",
-            "desc": "Non-final action  written"
-          },
-          {
-            "date": "2026-07-14",
-            "desc": "Teas/email correspondence entered"
-          },
-          {
-            "date": "2026-07-14",
-            "desc": "Teas response to office action received"
-          },
-          {
-            "date": "2026-07-14",
-            "desc": "Correspondence received in law office"
-          },
-          {
-            "date": "2026-04-14",
-            "desc": "Notification of non-final action e-mailed"
-          },
-          {
-            "date": "2026-04-14",
-            "desc": "Non-final action e-mailed"
-          },
-          {
-            "date": "2026-04-14",
-            "desc": "Non-final action  written"
-          },
-          {
-            "date": "2026-04-07",
-            "desc": "Teas/email correspondence entered"
-          },
-          {
-            "date": "2026-04-07",
-            "desc": "Teas response to office action received"
-          },
-          {
-            "date": "2026-04-07",
-            "desc": "Correspondence received in law office"
-          },
-          {
-            "date": "2026-01-07",
-            "desc": "Notification of non-final action e-mailed"
-          },
-          {
-            "date": "2026-01-07",
-            "desc": "Non-final action e-mailed"
-          },
-          {
-            "date": "2026-01-07",
-            "desc": "Non-final action  written"
-          },
-          {
-            "date": "2025-12-04",
-            "desc": "Teas/email correspondence entered"
-          },
-          {
-            "date": "2025-12-04",
-            "desc": "Teas response to office action received"
-          },
-          {
-            "date": "2025-12-04",
-            "desc": "Correspondence received in law office"
-          },
-          {
-            "date": "2025-11-12",
-            "desc": "Assigned to examiner"
-          },
-          {
-            "date": "2025-09-04",
-            "desc": "Notification of non-final action e-mailed"
-          },
-          {
-            "date": "2025-09-04",
-            "desc": "Non-final action e-mailed"
-          },
-          {
-            "date": "2025-09-04",
-            "desc": "Non-final action  written"
-          },
-          {
-            "date": "2025-08-25",
-            "desc": "Assigned to examiner"
-          },
-          {
-            "date": "2025-07-10",
-            "desc": "New application office supplied data entered"
-          },
-          {
-            "date": "2025-03-26",
-            "desc": "New application entered"
-          },
-          {
-            "date": "2025-03-26",
-            "desc": "Application filing receipt mailed"
-          }
-        ]
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -162,10 +45,7 @@
         "wordmark": "SSV"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Filed",
-        "nationalStatus": "Live/Pending"
+        "comparable": false
       }
     },
     {
@@ -174,141 +54,8 @@
       "office": "USPTO",
       "app": "99104968",
       "tmView": {
-        "ok": true,
-        "status": "Filed",
-        "registrationDate": "2025-04-18",
-        "expirationDate": null,
-        "oppositionPeriodEnd": null,
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "Roy D. Gross"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": [
-          {
-            "date": "2026-07-16",
-            "desc": "Notification of non-final action e-mailed"
-          },
-          {
-            "date": "2026-07-16",
-            "desc": "Non-final action e-mailed"
-          },
-          {
-            "date": "2026-07-16",
-            "desc": "Non-final action  written"
-          },
-          {
-            "date": "2026-07-14",
-            "desc": "Teas/email correspondence entered"
-          },
-          {
-            "date": "2026-07-14",
-            "desc": "Teas response to office action received"
-          },
-          {
-            "date": "2026-07-14",
-            "desc": "Correspondence received in law office"
-          },
-          {
-            "date": "2026-04-14",
-            "desc": "Notification of non-final action e-mailed"
-          },
-          {
-            "date": "2026-04-14",
-            "desc": "Non-final action e-mailed"
-          },
-          {
-            "date": "2026-04-14",
-            "desc": "Non-final action  written"
-          },
-          {
-            "date": "2026-04-01",
-            "desc": "Teas/email correspondence entered"
-          },
-          {
-            "date": "2026-03-30",
-            "desc": "Teas response to office action received"
-          },
-          {
-            "date": "2026-03-30",
-            "desc": "Correspondence received in law office"
-          },
-          {
-            "date": "2025-12-30",
-            "desc": "Notification of non-final action e-mailed"
-          },
-          {
-            "date": "2025-12-30",
-            "desc": "Non-final action e-mailed"
-          },
-          {
-            "date": "2025-12-30",
-            "desc": "Non-final action  written"
-          },
-          {
-            "date": "2025-12-04",
-            "desc": "Teas/email correspondence entered"
-          },
-          {
-            "date": "2025-12-04",
-            "desc": "Teas response to office action received"
-          },
-          {
-            "date": "2025-12-04",
-            "desc": "Correspondence received in law office"
-          },
-          {
-            "date": "2025-11-12",
-            "desc": "Assigned to examiner"
-          },
-          {
-            "date": "2025-09-04",
-            "desc": "Notification of non-final action e-mailed"
-          },
-          {
-            "date": "2025-09-04",
-            "desc": "Non-final action e-mailed"
-          },
-          {
-            "date": "2025-09-04",
-            "desc": "Non-final action  written"
-          },
-          {
-            "date": "2025-08-29",
-            "desc": "Notification of non-final action e-mailed"
-          },
-          {
-            "date": "2025-08-29",
-            "desc": "Non-final action e-mailed"
-          },
-          {
-            "date": "2025-08-29",
-            "desc": "Non-final action  written"
-          },
-          {
-            "date": "2025-08-25",
-            "desc": "Assigned to examiner"
-          },
-          {
-            "date": "2025-08-12",
-            "desc": "Notice of design search code e-mailed"
-          },
-          {
-            "date": "2025-08-12",
-            "desc": "New application office supplied data entered"
-          },
-          {
-            "date": "2025-03-26",
-            "desc": "New application entered"
-          },
-          {
-            "date": "2025-03-26",
-            "desc": "Application filing receipt mailed"
-          }
-        ]
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -324,10 +71,7 @@
         "wordmark": "SSV.NETWORK"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Filed",
-        "nationalStatus": "Live/Pending"
+        "comparable": false
       }
     },
     {
@@ -336,20 +80,8 @@
       "office": "EUIPO",
       "app": "019056030",
       "tmView": {
-        "ok": true,
-        "status": "Registered",
-        "registrationDate": "2024-11-29",
-        "expirationDate": "2034-07-17",
-        "oppositionPeriodEnd": "2024-11-21",
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "J. PEREIRA DA CRUZ, S.A."
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -360,13 +92,10 @@
           "cancellation"
         ],
         "textHash": 6192,
-        "sample": "eSearch plus\nThe EUIPO’s database access\nSearch\nAdvanced search\nEUTM file information\nSSV\n019056030\n eRegister\n Certificate\n Print\nLog in to access advanced functionalities Log in Sign up\nTimeline\n17/07/2024\nEUTM applicationreceived\n22/08/2024\nApplicationpublished\nExamination\n0 oppositions received\n22/11/2024\nEnd ofopposition period\n02/12/2024\nEUTM registeredand published\nOpposition proceedings\n17/07/2034\nEUTM expiry date\n27/08/2026\nRegistered EUTM\nActions and communications\nEUTM\nTrade mark information\nName\nSSV\nFiling number\n019056030\nBasis\nEUTM on which IA is based\nDate of receipt\n17/07/2024\nType\nWord\nNature\nIndividual\nNice classes\n9, 42 ( Nice Classification )\nVienna Classification\nFiling date\n17/07/2024\nRegistration date\n29/11/2024\nExpiry date\n17/07/2034\nDesignation date\nFiling language\nPortuguese\nSecond language\nEnglish\nApplication reference\n2.54APC/HL\nTrade mark status\nRegistered\nAc"
+        "sample": "eSearch plus\nThe EUIPO’s database access\nSearch\nAdvanced search\nEUTM file information\nSSV\n019056030\n eRegister\n Certificate\n Print\nLog in to access advanced functionalities Log in Sign up\nTimeline\n17/07/2024\nEUTM applicationreceived\n22/08/2024\nApplicationpublished\nExamination\n0 oppositions received\n22/11/2024\nEnd ofopposition period\n02/12/2024\nEUTM registeredand published\nOpposition proceedings\n17/07/2034\nEUTM expiry date\n28/08/2026\nRegistered EUTM\nActions and communications\nEUTM\nTrade mark information\nName\nSSV\nFiling number\n019056030\nBasis\nEUTM on which IA is based\nDate of receipt\n17/07/2024\nType\nWord\nNature\nIndividual\nNice classes\n9, 42 ( Nice Classification )\nVienna Classification\nFiling date\n17/07/2024\nRegistration date\n29/11/2024\nExpiry date\n17/07/2034\nDesignation date\nFiling language\nPortuguese\nSecond language\nEnglish\nApplication reference\n2.54APC/HL\nTrade mark status\nRegistered\nAc"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Registered",
-        "nationalStatus": "published"
+        "comparable": false
       }
     },
     {
@@ -375,20 +104,8 @@
       "office": "EUIPO",
       "app": "019070030",
       "tmView": {
-        "ok": true,
-        "status": "Registered",
-        "registrationDate": "2025-01-11",
-        "expirationDate": "2034-08-21",
-        "oppositionPeriodEnd": "2025-01-03",
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "J. PEREIRA DA CRUZ, S.A."
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -399,13 +116,10 @@
           "cancellation"
         ],
         "textHash": 5959,
-        "sample": "eSearch plus\nThe EUIPO’s database access\nSearch\nAdvanced search\nEUTM file information\nssv.network\n019070030\n eRegister\n Certificate\n Print\nLog in to access advanced functionalities Log in Sign up\nTimeline\n21/08/2024\nEUTM applicationreceived\n04/10/2024\nApplicationpublished\nExamination\n0 oppositions received\n07/01/2025\nEnd ofopposition period\n22/01/2025\nEUTM registeredand published\nOpposition proceedings\n21/08/2034\nEUTM expiry date\n27/08/2026\nRegistered EUTM\nActions and communications\nEUTM\nTrade mark information\nName\nssv.network\nFiling number\n019070030\nBasis\nEUTM\nDate of receipt\n21/08/2024\nType\nFigurative\nNature\nIndividual\nNice classes\n9, 42 ( Nice Classification )\nVienna Classification\n26.07.05 ( Vienna Classification )\nFiling date\n21/08/2024\nRegistration date\n11/01/2025\nExpiry date\n21/08/2034\nDesignation date\nFiling language\nPortuguese\nSecond language\nEnglish\nApplication reference\n03.285"
+        "sample": "eSearch plus\nThe EUIPO’s database access\nSearch\nAdvanced search\nEUTM file information\nssv.network\n019070030\n eRegister\n Certificate\n Print\nLog in to access advanced functionalities Log in Sign up\nTimeline\n21/08/2024\nEUTM applicationreceived\n04/10/2024\nApplicationpublished\nExamination\n0 oppositions received\n07/01/2025\nEnd ofopposition period\n22/01/2025\nEUTM registeredand published\nOpposition proceedings\n21/08/2034\nEUTM expiry date\n28/08/2026\nRegistered EUTM\nActions and communications\nEUTM\nTrade mark information\nName\nssv.network\nFiling number\n019070030\nBasis\nEUTM\nDate of receipt\n21/08/2024\nType\nFigurative\nNature\nIndividual\nNice classes\n9, 42 ( Nice Classification )\nVienna Classification\n26.07.05 ( Vienna Classification )\nFiling date\n21/08/2024\nRegistration date\n11/01/2025\nExpiry date\n21/08/2034\nDesignation date\nFiling language\nPortuguese\nSecond language\nEnglish\nApplication reference\n03.285"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Registered",
-        "nationalStatus": "published"
+        "comparable": false
       }
     },
     {
@@ -414,20 +128,8 @@
       "office": "UK IPO",
       "app": "UK00004152137",
       "tmView": {
-        "ok": true,
-        "status": "Registered",
-        "registrationDate": "2025-04-18",
-        "expirationDate": "2035-01-24",
-        "oppositionPeriodEnd": "2025-04-07",
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "Rheia IP Limited"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -438,10 +140,7 @@
         "sample": "Skip to main content\n Intellectual Property Office\nApply to register a trade mark\nSecurity check\nWhen we notice a high number of visits from a single user, we perform a security check to ensure the user is genuine. This is to keep our services safe from automated systems which are attempting to extract copies of our data (also known as ‘data mining’).\nThis security check is required for you to continue to the apply to register a trade mark service.\nSupport links\n All content is available under the Open Government Licence v3.0, except where otherwise stated\n© Crown copyright"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Registered",
-        "nationalStatus": null
+        "comparable": false
       }
     },
     {
@@ -450,20 +149,8 @@
       "office": "UK IPO",
       "app": "UK00004152144",
       "tmView": {
-        "ok": true,
-        "status": "Registered",
-        "registrationDate": "2025-04-18",
-        "expirationDate": "2035-01-24",
-        "oppositionPeriodEnd": "2025-04-07",
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "Rheia IP Limited"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -474,10 +161,7 @@
         "sample": "Skip to main content\n Intellectual Property Office\nApply to register a trade mark\nSecurity check\nWhen we notice a high number of visits from a single user, we perform a security check to ensure the user is genuine. This is to keep our services safe from automated systems which are attempting to extract copies of our data (also known as ‘data mining’).\nThis security check is required for you to continue to the apply to register a trade mark service.\nSupport links\n All content is available under the Open Government Licence v3.0, except where otherwise stated\n© Crown copyright"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Registered",
-        "nationalStatus": null
+        "comparable": false
       }
     },
     {
@@ -486,97 +170,8 @@
       "office": "IP Australia",
       "app": "2541093",
       "tmView": {
-        "ok": true,
-        "status": "Registered",
-        "registrationDate": "2025-11-03",
-        "expirationDate": "2035-04-17",
-        "oppositionPeriodEnd": null,
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "Adrian M Trioli Patent and Trade Mark Attorney"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": [
-          {
-            "date": "2025-11-03",
-            "desc": "Status change to registered/protected"
-          },
-          {
-            "date": "2025-11-03",
-            "desc": "Ip right registration published"
-          },
-          {
-            "date": "2025-11-03",
-            "desc": "Ip right registered correspondence sent"
-          },
-          {
-            "date": "2025-08-27",
-            "desc": "Ip right has been examined"
-          },
-          {
-            "date": "2025-08-27",
-            "desc": "Ip right acceptance published"
-          },
-          {
-            "date": "2025-08-27",
-            "desc": "Application accepted correspondence sent"
-          },
-          {
-            "date": "2025-04-29",
-            "desc": "Word and image indexing completed"
-          },
-          {
-            "date": "2025-04-29",
-            "desc": "Status change to accepted"
-          },
-          {
-            "date": "2025-04-29",
-            "desc": "Examination expedited"
-          },
-          {
-            "date": "2025-04-29",
-            "desc": "Early acceptance notice correspondence sent"
-          },
-          {
-            "date": "2025-04-29",
-            "desc": "Awaiting examination"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Trade mark representation updated"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Status change to received"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Status change to published"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Status change to filed"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Minimum filing requirements considered"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Ip right filed published"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Ip right filed correspondence sent"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Application received"
-          }
-        ]
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -590,10 +185,7 @@
         "sample": "Australian Trade Mark Search\nAustralian Trade Mark Search is the Australian Government’s trade mark search system.\nHome\n  Quick search Trade mark 2541093\n Advanced search\n1\nCurrently registered\nFiled\nFiled\n17 Apr 2025\nExamined\nFirst report\n29 Apr 2025\nAcceptance / Opposition\nAcceptance advertised / published\n27 Aug 2025\nRegistered\nRenewal due\n17 Apr 2035\n  View details\nNumber 2541093\nWords SSV Status ● Registered: Registered/protected Priority date 24 Jan 2025 (Convention) Classes 9, 42 Kind Word\nSSV\nGoods & Services\nClass 9: Application software; Downloadable computer software for blockchain technology; Downloadable computer software for managing crypto asset transactions using blockchain technology; Data and file management and database software; Cryptography software; Utility, security and cryptography software; Data mining software; Downloadable cryptographic keys for receiving and s"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Registered",
-        "nationalStatus": "registered"
+        "comparable": false
       }
     },
     {
@@ -602,77 +194,8 @@
       "office": "IP Australia",
       "app": "2541094",
       "tmView": {
-        "ok": true,
-        "status": "Filed",
-        "registrationDate": null,
-        "expirationDate": null,
-        "oppositionPeriodEnd": null,
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "Adrian M Trioli Patent and Trade Mark Attorney"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": [
-          {
-            "date": "2026-04-29",
-            "desc": "Acceptance due date reminder correspondence sent"
-          },
-          {
-            "date": "2025-04-29",
-            "desc": "Word and image indexing completed"
-          },
-          {
-            "date": "2025-04-29",
-            "desc": "Ip right has been examined"
-          },
-          {
-            "date": "2025-04-29",
-            "desc": "Examination expedited"
-          },
-          {
-            "date": "2025-04-29",
-            "desc": "Awaiting examination"
-          },
-          {
-            "date": "2025-04-29",
-            "desc": "Adverse report (examination) correspondence sent"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Trade mark representation updated"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Status change to received"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Status change to published"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Status change to filed"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Minimum filing requirements considered"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Ip right filed published"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Ip right filed correspondence sent"
-          },
-          {
-            "date": "2025-04-17",
-            "desc": "Application received"
-          }
-        ]
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -686,10 +209,7 @@
         "sample": "Australian Trade Mark Search\nAustralian Trade Mark Search is the Australian Government’s trade mark search system.\nHome\n  Quick search Trade mark 2541094\n Advanced search\n1\nNot Registered\nFiled\nFiled\n17 Apr 2025\nExamined\nFirst report\n29 Apr 2025\nLapsed\n29 Jul 2026\nAcceptance / Opposition\nRegistered\n  View details\nNumber 2541094\nWords SSV.NETWORK Image description DIAMONDS FORM DIAMOND,DIVIDED Status ● Lapsed: Not accepted Priority date 26 Mar 2025 (Convention) Classes 9, 42 Kind Figurative\nGoods & Services\nClass 9: Application software; Downloadable computer software for blockchain technology; Downloadable computer software for managing crypto asset transactions using blockchain technology; Data and file management and database software; Cryptography software; Utility, security and cryptography software; Data mining software; Downloadable cryptographic keys for receiving and spending cry"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Filed",
-        "nationalStatus": "Registered"
+        "comparable": false
       }
     },
     {
@@ -698,34 +218,19 @@
       "office": "CIPO",
       "app": "2398060",
       "tmView": {
-        "ok": true,
-        "status": "Filed",
-        "registrationDate": null,
-        "expirationDate": null,
-        "oppositionPeriodEnd": null,
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "CASSELS BROCK & BLACKWELL LLP"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
         "source": "scrape",
         "statusLine": null,
         "flags": [],
-        "textHash": 240,
-        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398060\nClient IP: 48.211.212.215\nAttack ID: 20000051\nMessage ID: 009706561470"
+        "textHash": 239,
+        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398060\nClient IP: 52.159.229.57\nAttack ID: 20000051\nMessage ID: 009726645665"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Filed",
-        "nationalStatus": null
+        "comparable": false
       }
     },
     {
@@ -734,34 +239,19 @@
       "office": "CIPO",
       "app": "2398059",
       "tmView": {
-        "ok": true,
-        "status": "Filed",
-        "registrationDate": null,
-        "expirationDate": null,
-        "oppositionPeriodEnd": null,
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "CASSELS BROCK & BLACKWELL LLP"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
         "source": "scrape",
         "statusLine": null,
         "flags": [],
-        "textHash": 240,
-        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398059\nClient IP: 48.211.212.215\nAttack ID: 20000051\nMessage ID: 009706562044"
+        "textHash": 239,
+        "sample": "block\nWeb Page Blocked!\nThe page cannot be displayed. Please contact the administrator for additional information.\nURL: ised-isde.canada.ca/cipo/trademark-search/2398059\nClient IP: 52.159.229.57\nAttack ID: 20000051\nMessage ID: 009726646439"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Filed",
-        "nationalStatus": null
+        "comparable": false
       }
     },
     {
@@ -770,20 +260,8 @@
       "office": "IPONZ",
       "app": "1290682",
       "tmView": {
-        "ok": true,
-        "status": "Filed",
-        "registrationDate": null,
-        "expirationDate": null,
-        "oppositionPeriodEnd": null,
-        "applicants": [
-          "SSV Foundation"
-        ],
-        "representatives": [
-          "Adrian M Trioli Patent and Trade Mark Attorney"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": false,
@@ -799,20 +277,8 @@
       "office": "INPI",
       "app": "940265788",
       "tmView": {
-        "ok": true,
-        "status": "Filed",
-        "registrationDate": null,
-        "expirationDate": null,
-        "oppositionPeriodEnd": "2025-11-01",
-        "applicants": [
-          "SSV FOUNDATION"
-        ],
-        "representatives": [
-          "LEÃO PROPRIEDADE INTELECTUAL"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -824,10 +290,7 @@
         "note": "INPI landing reached; per-processo lookup is session-gated — verify manually if flagged"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Filed",
-        "nationalStatus": null
+        "comparable": false
       }
     },
     {
@@ -836,20 +299,8 @@
       "office": "INPI",
       "app": "940266032",
       "tmView": {
-        "ok": true,
-        "status": "Filed",
-        "registrationDate": null,
-        "expirationDate": null,
-        "oppositionPeriodEnd": "2025-11-01",
-        "applicants": [
-          "SSV FOUNDATION"
-        ],
-        "representatives": [
-          "LEÃO PROPRIEDADE INTELECTUAL"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -861,10 +312,7 @@
         "note": "INPI landing reached; per-processo lookup is session-gated — verify manually if flagged"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Filed",
-        "nationalStatus": null
+        "comparable": false
       }
     },
     {
@@ -873,20 +321,8 @@
       "office": "INPI",
       "app": "940267160",
       "tmView": {
-        "ok": true,
-        "status": "Filed",
-        "registrationDate": null,
-        "expirationDate": null,
-        "oppositionPeriodEnd": "2025-10-25",
-        "applicants": [
-          "SSV FOUNDATION"
-        ],
-        "representatives": [
-          "LEÃO PROPRIEDADE INTELECTUAL"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -898,10 +334,7 @@
         "note": "INPI landing reached; per-processo lookup is session-gated — verify manually if flagged"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Filed",
-        "nationalStatus": null
+        "comparable": false
       }
     },
     {
@@ -910,20 +343,8 @@
       "office": "INPI",
       "app": "940267543",
       "tmView": {
-        "ok": true,
-        "status": "Filed",
-        "registrationDate": null,
-        "expirationDate": null,
-        "oppositionPeriodEnd": "2025-10-25",
-        "applicants": [
-          "SSV FOUNDATION"
-        ],
-        "representatives": [
-          "LEÃO PROPRIEDADE INTELECTUAL"
-        ],
-        "oppositions": 0,
-        "cancellations": 0,
-        "events": []
+        "ok": false,
+        "reason": "mark not returned by TMView search"
       },
       "national": {
         "ok": true,
@@ -935,10 +356,7 @@
         "note": "INPI landing reached; per-processo lookup is session-gated — verify manually if flagged"
       },
       "discrepancy": {
-        "comparable": true,
-        "agree": true,
-        "tmviewStatus": "Filed",
-        "nationalStatus": null
+        "comparable": false
       }
     }
   ]
